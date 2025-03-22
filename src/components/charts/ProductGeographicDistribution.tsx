@@ -356,12 +356,12 @@ const ProductGeographicDistribution = () => {
   return (
     <Card className="dark:bg-dark-card">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
-        <CardTitle className="text-md font-medium text-black">
+        <CardTitle className="text-md font-medium text-gray-900 dark:text-gray-100">
           Product Geographic Distribution
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <Text className="mt-2 mb-6 text-black">
+        <Text className="mt-2 mb-6 text-gray-700 dark:text-gray-300">
           Visualize product popularity and sales performance across different states. Click on a state to see detailed product data.
         </Text>
         
@@ -372,28 +372,28 @@ const ProductGeographicDistribution = () => {
         
         {selectedState && (
           <div className="mt-6">
-            <h3 className="text-lg font-medium text-black mb-3">Top Products in {selectedState}</h3>
+            <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-3">Top Products in {selectedState}</h3>
             <div className="overflow-x-auto">
               <table className="w-full min-w-full">
                 <thead>
                   <tr className="border-b border-gray-200 dark:border-gray-700">
-                    <th className="px-4 py-3 text-left text-sm font-medium text-black">Product</th>
-                    <th className="px-4 py-3 text-right text-sm font-medium text-black">Sales</th>
-                    <th className="px-4 py-3 text-right text-sm font-medium text-black">Growth</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-700 dark:text-gray-300">Product</th>
+                    <th className="px-4 py-3 text-right text-sm font-medium text-gray-700 dark:text-gray-300">Sales</th>
+                    <th className="px-4 py-3 text-right text-sm font-medium text-gray-700 dark:text-gray-300">Growth</th>
                   </tr>
                 </thead>
                 <tbody>
                   {stateProducts.map((product, index) => (
                     <tr key={index} className="border-b border-gray-200 dark:border-gray-700">
-                      <td className="px-4 py-3 text-sm font-medium text-black">{product.product}</td>
-                      <td className="px-4 py-3 text-sm text-right text-black">{formatCurrency(product.sales)}</td>
+                      <td className="px-4 py-3 text-sm font-medium text-gray-900 dark:text-gray-200">{product.product}</td>
+                      <td className="px-4 py-3 text-sm text-right text-gray-900 dark:text-gray-200">{formatCurrency(product.sales)}</td>
                       <td className="px-4 py-3 text-sm text-right">
                         <span className={`px-2 py-1 rounded-full text-xs ${
                           product.growth > 15 
-                            ? 'bg-emerald-100 text-black' 
+                            ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300' 
                             : product.growth > 10 
-                              ? 'bg-amber-100 text-black' 
-                              : 'bg-blue-100 text-black'
+                              ? 'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300' 
+                              : 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300'
                         }`}>
                           +{product.growth}%
                         </span>

@@ -26,6 +26,7 @@ import GeographicSalesMap from '@/components/charts/GeographicSalesMap';
 import CustomerCohortAnalysis from '@/components/charts/CustomerCohortAnalysis';
 import ProductRecommendationEngine from '@/components/charts/ProductRecommendationEngine';
 import ProductGeographicDistribution from '@/components/charts/ProductGeographicDistribution';
+import Interactive3DDataViz from '@/components/charts/Interactive3DDataViz';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
 export default function Home() {
@@ -281,6 +282,12 @@ export default function Home() {
               <div className="mb-8">
                 <SmartInsightsDashboard />
               </div>
+              
+              {/* Multi-Dimensional Data Explorer temporarily removed
+              <div className="mb-6">
+                <Interactive3DDataViz />
+              </div>
+              */}
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <CorrelationHeatmap />

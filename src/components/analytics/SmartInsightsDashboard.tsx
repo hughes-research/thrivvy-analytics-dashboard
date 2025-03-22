@@ -247,19 +247,19 @@ export default function SmartInsightsDashboard() {
                             return (
                               <div 
                                 key={index}
-                                className="p-3 border rounded-lg bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-800"
+                                className="p-3 rounded-lg bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 shadow-sm"
                               >
                                 <div className="flex justify-between items-start">
                                   <div>
-                                    <h4 className="font-medium">{item.date}</h4>
+                                    <h4 className="font-medium text-gray-900 dark:text-gray-100">{item.date}</h4>
                                     <p className="text-sm text-gray-500 dark:text-gray-400">
                                       Expected: ${item.expected.toLocaleString()}
                                     </p>
-                                    <p className="text-sm font-medium">
+                                    <p className="text-sm font-medium text-gray-900 dark:text-gray-200">
                                       Actual: ${item.value.toLocaleString()}
                                     </p>
                                   </div>
-                                  <Badge className={`${isPositive ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300'}`}>
+                                  <Badge className={`${isPositive ? 'bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300' : 'bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300'}`}>
                                     {isPositive ? '+' : ''}{percentDiff.toFixed(1)}%
                                   </Badge>
                                 </div>
@@ -421,9 +421,6 @@ export default function SmartInsightsDashboard() {
                         showLegend={true}
                         showAnimation={true}
                         curveType="monotone"
-                        areaStyle={{
-                          fillOpacity: 0.2
-                        }}
                         customTooltip={({ payload }) => {
                           if (!payload?.[0]?.payload) return null;
                           const data = payload[0].payload;
