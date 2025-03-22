@@ -1,0 +1,168 @@
+# Ultimate Guide for Building a Best-in-Class Retail Analytics Application
+
+## Context and Overview
+
+You are tasked with designing and developing a cutting-edge retail analytics platform that transforms how consumer packaged goods (CPG) manufacturers and retailers understand market dynamics. The current generation of tools (like those from Datasembly and Wiser) provide useful data but fall short in UX design, data visualization, and integration of consumer insights. Your mission is to create a solution that addresses these limitations while incorporating modern design principles and technologies.
+
+## Core Objectives
+
+1. **Seamlessly integrate retail execution data with consumer behavior insights**
+2. **Provide actionable intelligence, not just data visualization**
+3. **Create an intuitive, delightful user experience that accelerates decision-making**
+4. **Enable cross-channel visibility (brick-and-mortar and e-commerce)**
+5. **Incorporate predictive capabilities, not just descriptive analytics**
+
+## Technical Stack Guidelines
+
+### Frontend Framework
+- Implement React or Vue.js with TypeScript for a component-based architecture
+- Consider Next.js for improved performance and SEO benefits
+- Use a state management solution like Redux Toolkit or Pinia for complex state management
+
+### Data Visualization Libraries
+- Primary: D3.js for custom, highly interactive visualizations
+- Supporting: Recharts or Nivo for simpler chart implementations
+- Geospatial: Mapbox GL JS or deck.gl for high-performance mapping
+- Consider ECharts for complex visualizations requiring enhanced performance
+
+### Performance Optimization
+- Implement virtualization for large datasets using react-window or similar
+- Use WebWorkers for computationally intensive operations to avoid UI blocking
+- Implement effective API data caching with React Query or SWR
+- Optimize bundle size using code splitting and lazy loading
+
+### Backend Considerations
+- GraphQL API for flexible data fetching and reduced over-fetching
+- Implement WebSockets for real-time updates where appropriate
+- Consider a microservices architecture for scalability of different functional areas
+
+## UX Design Principles
+
+### Information Architecture
+- Organize dashboard layouts following the "overview first, zoom and filter, then details-on-demand" principle
+- Implement a hub-and-spoke navigation model with a central dashboard and specialized views
+- Use a consistent visual language to indicate relationships between data elements
+
+
+### User Interaction
+- Design primarily for direct manipulation of data elements
+- Implement contextual actions that appear when and where they're needed
+- Provide multiple pathways to the same information for different user workflows
+- Support keyboard shortcuts for power users
+
+### Cognitive Load Reduction
+- Implement progressive disclosure — show only what's needed at each decision point
+- Use smart defaults based on user context and history
+- Provide inline help and contextual guidance rather than separate documentation
+- Minimize required user inputs through smart defaults and remembered preferences
+
+## Key Features to Implement
+
+### 1. Multi-dimensional Price Analysis
+- Price comparison across retailers, regions, and time periods
+- Price elasticity modeling and what-if scenario planning
+- Automated anomaly detection with configurable thresholds
+- Competitive price gap visualization and alerting
+
+### 2. Enhanced Distribution Analytics
+- Store-level distribution tracking with filterable attributes
+- Opportunity sizing for distribution gaps
+- Out-of-stock prediction using ML models
+- Integrated supply chain visibility
+
+### 3. Consumer Behavior Integration
+- Demographic overlay on geographic visualizations
+- Purchase behavior segmentation and targeting
+- Consumer sentiment correlation with pricing and distribution
+- Basket analysis for cross-selling opportunities
+
+### 4. Predictive Intelligence
+- ML-driven sales forecasting based on price, promotion, and distribution scenarios
+- Competitor action prediction models
+- Automated opportunity identification and prioritization
+- Optimal price point recommendations by channel and region
+
+### 5. Actionable Workflow Integration
+- Personalized alerts and notifications based on user role and KPIs
+- Embeddable insights that can be shared across the organization
+- Configurable approval workflows for price or promotion changes
+- Integration with execution systems (e.g., TPM, CRM)
+
+## Data Visualization Guidelines
+
+### Chart and Graph Best Practices
+- Choose the right visualization for each data type and analytical question
+- Maintain consistent scales when comparing multiple metrics
+- Use animation purposefully to show transitions and changes
+- Provide context through appropriate benchmarks and historical comparisons
+
+### Maps and Geospatial Visualizations
+- Use choropleth maps with thoughtful color scales for regional data
+- Implement clustering for dense point data to prevent visual overload
+- Provide multiple ways to filter and segment geographic data
+- Use small multiples for comparing geographic patterns across time periods
+
+### Tables and Data Grids
+- Implement virtual scrolling for large datasets
+- Provide inline visualizations within tables (sparklines, bar charts)
+- Enable robust sorting, filtering, and grouping capabilities
+- Allow customizable column visibility and ordering
+
+### Dashboard Layout
+- Implement a responsive grid system that adapts to different screen sizes
+- Allow user customization of dashboard layouts and saved configurations
+- Provide templates for common analytical workflows
+- Use card-based components with consistent interaction patterns
+
+## Implementation Approach
+
+### Phase 1: Foundation
+- Core data visualization components and design system
+- Basic dashboard framework with essential retail KPIs
+- Fundamental price and distribution analytics
+- User management and role-based access control
+
+### Phase 2: Enhanced Analytics
+- Advanced comparative analytics features
+- Predictive modeling capabilities
+- Cross-channel visibility enhancements
+- Customizable alerts and notifications
+
+### Phase 3: Intelligence Layer
+- ML-powered recommendations and insights
+- Consumer behavior integration
+- Natural language query capabilities
+- Scenario planning and simulation tools
+
+### Phase 4: Ecosystem Integration
+- API ecosystem for third-party extensions
+- Embedded analytics for external platforms
+- Mobile companion applications
+- Offline capabilities for field teams
+
+## User Testing and Iteration Plan
+
+- Conduct usability testing with actual retail and CPG users
+- Implement A/B testing for key workflows and visualizations
+- Establish a metrics framework for measuring successful adoption
+- Create a feedback loop for continuous improvement
+
+## Common Pitfalls to Avoid
+
+1. **Data overload** - providing too much information without proper organization
+2. **Insight deficit** - displaying data without actionable recommendations
+3. **Performance issues** with large datasets, especially on maps and complex visualizations
+4. **Steep learning curve** that impedes adoption and value realization
+5. **Poor mobile experiences** that frustrate field users
+6. **Focusing on features** rather than solving specific business problems
+
+## Success Metrics
+
+Track and optimize for these key metrics:
+- Time to insight (how quickly users can answer common business questions)
+- User engagement (frequency and duration of use)
+- Feature adoption rates across different user roles
+- User-reported satisfaction scores
+- Tangible business outcomes attributed to platform insights
+
+By following these guidelines, you will create not just another analytics dashboard, but a transformative decision support platform that becomes essential to how retail and CPG businesses operate in the modern marketplace.
